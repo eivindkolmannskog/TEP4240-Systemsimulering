@@ -13,5 +13,4 @@ minIndex = find(diff_vec == minDiff);
 
 xcross = x(minIndex);
 ycross = y1_int(minIndex);
-
 end
