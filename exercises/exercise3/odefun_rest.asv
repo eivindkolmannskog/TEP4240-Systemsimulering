@@ -1,0 +1,11 @@
+function dxdt = odefun_rest(t,x)
+    m = 80;
+    R = 0.1;
+    k = 0.1;
+    g = 9.81;
+    x1 = 0;
+    v1dot = 0;
+    dxdt = zeros(2,1);
+    dxdt(1) = v2
+    dxdt(2) = R/m*v1-R/m*v2+k/m*x2-k/m*x1+g+
+end

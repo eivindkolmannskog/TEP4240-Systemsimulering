@@ -1,0 +1,25 @@
+
+function dydt = odefunsine(t, y)
+    % Extract variables from the y vector
+    x2 = y(1);
+    v2 = y(2);
+    
+    omega = 2;
+    max_displacement = 0.01; % 1cm
+
+
+    xt = sin(omega*t)*max_displacement;
+    vt = omega*cos(omega*t)*max_displacement;
+
+    m = 80;
+    R = 10;
+    k = 15;
+    g = 9.81;
+
+    % Define the system of ODEs
+    x2dot = v2;
+    v2dot = 1/m*(R*(x2dot-vt))
+
+    % Pack the derivatives into a column vector
+    dydt = [x2dot; v2dot];
+end
