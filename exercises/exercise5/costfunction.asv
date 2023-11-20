@@ -1,0 +1,7 @@
+function costfunction = costfunction(R,C)
+[~,y] =ode45(@odefun,[0 10*pi],[0 0 0]);
+[t,y] =ode45(@odefun,[10*pi:0.1:12*pi],y(end,:));
+
+cost = sum(abs(y(:,1)-cos(t)))
+
+end
